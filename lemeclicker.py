@@ -3,7 +3,7 @@ import time
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()  # Load from .env file
+load_dotenv()
 
 URL = "https://lemehost.com/server/3098476/free_plan?extend_time=1&_pjax=%23p0"
 
@@ -28,9 +28,5 @@ def extend_time():
 
 
 if __name__ == "__main__":
-    print("🚀 Auto Lemehost extender started")
-    while True:
-        extend_time()
-        print("⏳ Waiting 20 minutes...\n")
-        time.sleep(29 * 60)
-
+    print("🚀 LemeClicker started")
+    extend_time()
