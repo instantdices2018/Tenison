@@ -25,4 +25,4 @@ jobs:
       env:
         LEME_ADVANCED_FRONTEND: ${{ secrets.LEME_ADVANCED_FRONTEND }}
         LEME_IDENTITY_FRONTEND: ${{ secrets.LEME_IDENTITY_FRONTEND }}
-      run: python extend.py
+      run: python lemeclicker.py
