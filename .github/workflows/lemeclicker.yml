@@ -1,7 +1,8 @@
 name: LemeClicker Bot
 
 on:
-  workflow_dispatch:
+  
+  workflow_dispatch:  # Optional: manual run button
 
 jobs:
   run:
