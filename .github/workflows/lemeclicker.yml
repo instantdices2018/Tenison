@@ -7,21 +7,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        attempt: [1, 2, 3]
-
     steps:
-    - name: Show current attempt
-      run: echo "Attempt number ${{ matrix.attempt }}"
-
-    - name: Sleep to reduce runner congestion (optional)
-      run: |
-        SECONDS=$(( ${{ matrix.attempt }} * 10 ))
-        echo "Sleeping for $SECONDS seconds..."
-        sleep $SECONDS
-
     - name: Checkout repo
       uses: actions/checkout@v3
 
