@@ -1,7 +1,7 @@
 name: LemeClicker Bot
 
 on:
-  workflow_dispatch:  # Optional: manual run button
+  workflow_dispatch:
 
 jobs:
   run:
@@ -17,7 +17,10 @@ jobs:
       run: echo "Attempt number ${{ matrix.attempt }}"
 
     - name: Sleep to reduce runner congestion (optional)
-      run: sleep $(( ${{ matrix.attempt }} * 10 ))
+      run: |
+        SECONDS=$(( ${{ matrix.attempt }} * 10 ))
+        echo "Sleeping for $SECONDS seconds..."
+        sleep $SECONDS
 
     - name: Checkout repo
       uses: actions/checkout@v3
